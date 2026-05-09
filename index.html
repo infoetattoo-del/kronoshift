@@ -21,15 +21,8 @@
       --border: rgba(255,255,255,.12);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "Inter", sans-serif;
@@ -53,19 +46,14 @@
       z-index: 0;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    .page { position: relative; z-index: 1; }
+    .container { width: min(100% - 56px, 1480px); margin-inline: auto; }
 
-    .page {
-      position: relative;
-      z-index: 1;
-    }
-
-    .container {
-      width: min(100% - 56px, 1480px);
-      margin-inline: auto;
+    .ks-logo {
+      display: block;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(18,232,189,.18));
     }
 
     .header {
@@ -83,12 +71,7 @@
       min-width: 270px;
     }
 
-    .brand-logo {
-      width: 86px;
-      height: 86px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 18px rgba(18,232,189,.18));
-    }
+    .brand-logo { width: 86px; height: 86px; }
 
     .brand-name {
       font-size: 34px;
@@ -97,9 +80,7 @@
       line-height: 1;
     }
 
-    .brand-name span {
-      color: var(--green);
-    }
+    .brand-name span { color: var(--green); }
 
     .nav {
       display: flex;
@@ -110,15 +91,8 @@
       color: rgba(255,255,255,.9);
     }
 
-    .nav a {
-      position: relative;
-      transition: color .2s ease;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      color: #fff;
-    }
+    .nav a { position: relative; transition: color .2s ease; }
+    .nav a:hover, .nav a.active { color: #fff; }
 
     .nav a.active::after {
       content: "";
@@ -143,10 +117,7 @@
       transition: background .2s ease, transform .2s ease;
     }
 
-    .platform-btn:hover {
-      background: rgba(18,232,189,.1);
-      transform: translateY(-1px);
-    }
+    .platform-btn:hover { background: rgba(18,232,189,.1); transform: translateY(-1px); }
 
     .hero {
       min-height: 685px;
@@ -157,10 +128,7 @@
       padding-block: 48px 34px;
     }
 
-    .hero-copy {
-      position: relative;
-      z-index: 4;
-    }
+    .hero-copy { position: relative; z-index: 4; }
 
     .hero h1 {
       max-width: 690px;
@@ -172,7 +140,6 @@
 
     .hero h1 .accent {
       display: inline-block;
-      color: var(--green);
       background: linear-gradient(90deg, #10d7b2, #21f7c9 55%, #79ffe1);
       -webkit-background-clip: text;
       background-clip: text;
@@ -188,12 +155,7 @@
       color: rgba(255,255,255,.78);
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 26px;
-      margin-top: 44px;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 26px; margin-top: 44px; flex-wrap: wrap; }
 
     .btn {
       min-width: 272px;
@@ -204,12 +166,10 @@
       padding: 19px 28px;
       font-size: 19px;
       font-weight: 900;
-      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+      transition: transform .2s ease, background .2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
+    .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
       color: #fff;
@@ -223,10 +183,7 @@
       background: rgba(0,0,0,.08);
     }
 
-    .btn-secondary strong {
-      color: var(--green);
-      margin-left: 4px;
-    }
+    .btn-secondary strong { color: var(--green); margin-left: 4px; }
 
     .hero-visual {
       position: relative;
@@ -274,21 +231,10 @@
       font-weight: 900;
     }
 
-    .mini-brand img {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-    }
+    .mini-brand img { width: 34px; height: 34px; object-fit: contain; }
+    .mini-brand span { color: var(--green); }
 
-    .mini-brand span {
-      color: var(--green);
-    }
-
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 18px;
-    }
+    .dashboard-grid { display: grid; grid-template-columns: 120px 1fr; gap: 18px; }
 
     .side {
       display: flex;
@@ -298,26 +244,11 @@
       color: rgba(255,255,255,.6);
     }
 
-    .side div {
-      padding: 11px 12px;
-      border-radius: 9px;
-    }
+    .side div { padding: 11px 12px; border-radius: 9px; }
+    .side .selected { background: rgba(18,232,189,.13); color: var(--green); font-weight: 800; }
 
-    .side .selected {
-      background: rgba(18,232,189,.13);
-      color: var(--green);
-      font-weight: 800;
-    }
-
-    .dash-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .dash-title h3 {
-      font-size: 22px;
-    }
+    .dash-title { display: flex; align-items: center; justify-content: space-between; }
+    .dash-title h3 { font-size: 22px; }
 
     .dash-title button {
       border: 0;
@@ -329,12 +260,7 @@
       font-size: 11px;
     }
 
-    .dash-cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 22px;
-    }
+    .dash-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 22px; }
 
     .dash-card {
       min-height: 70px;
@@ -344,23 +270,10 @@
       padding: 11px;
     }
 
-    .dash-card small {
-      color: rgba(255,255,255,.48);
-      font-size: 10px;
-    }
+    .dash-card small { color: rgba(255,255,255,.48); font-size: 10px; }
+    .dash-card strong { display: block; margin-top: 8px; font-size: 22px; }
 
-    .dash-card strong {
-      display: block;
-      margin-top: 8px;
-      font-size: 22px;
-    }
-
-    .dash-list {
-      margin-top: 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    .dash-list { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
 
     .dash-row {
       display: flex;
@@ -371,17 +284,8 @@
       background: rgba(255,255,255,.035);
     }
 
-    .dash-row strong {
-      display: block;
-      font-size: 12px;
-    }
-
-    .dash-row small {
-      display: block;
-      margin-top: 4px;
-      font-size: 10px;
-      color: rgba(255,255,255,.45);
-    }
+    .dash-row strong { display: block; font-size: 12px; }
+    .dash-row small { display: block; margin-top: 4px; font-size: 10px; color: rgba(255,255,255,.45); }
 
     .status {
       align-self: center;
@@ -393,10 +297,7 @@
       background: rgba(18,232,189,.13);
     }
 
-    .status.wait {
-      color: #facc15;
-      background: rgba(250,204,21,.13);
-    }
+    .status.wait { color: #facc15; background: rgba(250,204,21,.13); }
 
     .phone {
       position: absolute;
@@ -421,15 +322,32 @@
       overflow: hidden;
     }
 
-    .phone-time {
-      font-size: 10px;
-      color: rgba(255,255,255,.54);
+    .phone-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 14px;
     }
 
-    .phone h3 {
-      margin-top: 20px;
-      font-size: 17px;
+    .phone-brand {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 900;
     }
+
+    .phone-brand img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    .phone-brand span { color: var(--green); }
+    .phone-time { font-size: 9px; color: rgba(255,255,255,.54); }
+
+    .phone h3 { margin-top: 6px; font-size: 17px; }
 
     .tabs {
       display: flex;
@@ -440,57 +358,17 @@
       font-size: 10px;
     }
 
-    .tabs span {
-      flex: 1;
-      text-align: center;
-      padding: 7px 6px;
-      border-radius: 99px;
-      color: rgba(255,255,255,.45);
-    }
+    .tabs span { flex: 1; text-align: center; padding: 7px 6px; border-radius: 99px; color: rgba(255,255,255,.45); }
+    .tabs .on { color: #03100d; background: var(--green); font-weight: 900; }
 
-    .tabs .on {
-      color: #03100d;
-      background: var(--green);
-      font-weight: 900;
-    }
+    .mission { margin-top: 12px; padding: 12px; border-radius: 13px; background: rgba(255,255,255,.04); font-size: 11px; }
+    .mission strong { display: block; }
+    .mission small { display: block; margin-top: 4px; color: rgba(255,255,255,.45); }
 
-    .mission {
-      margin-top: 12px;
-      padding: 12px;
-      border-radius: 13px;
-      background: rgba(255,255,255,.04);
-      font-size: 11px;
-    }
+    .mission-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; font-weight: 900; }
+    .mission-footer span:last-child { border-radius: 5px; background: var(--green); color: #03100d; padding: 5px 7px; font-size: 9px; }
 
-    .mission strong {
-      display: block;
-    }
-
-    .mission small {
-      display: block;
-      margin-top: 4px;
-      color: rgba(255,255,255,.45);
-    }
-
-    .mission-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 12px;
-      font-weight: 900;
-    }
-
-    .mission-footer span:last-child {
-      border-radius: 5px;
-      background: var(--green);
-      color: #03100d;
-      padding: 5px 7px;
-      font-size: 9px;
-    }
-
-    .stats {
-      padding-bottom: 64px;
-    }
+    .stats { padding-bottom: 64px; }
 
     .stats-box {
       display: grid;
@@ -502,57 +380,17 @@
       box-shadow: 0 20px 80px rgba(0,0,0,.22);
     }
 
-    .stat {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      padding: 34px 46px;
-      border-right: 1px solid rgba(255,255,255,.11);
-    }
+    .stat { display: flex; align-items: center; gap: 25px; padding: 34px 46px; border-right: 1px solid rgba(255,255,255,.11); }
+    .stat:last-child { border-right: 0; }
 
-    .stat:last-child {
-      border-right: 0;
-    }
+    .stat svg { width: 58px; height: 58px; color: var(--green); stroke-width: 1.7; flex: 0 0 auto; }
+    .stat-label { font-size: 20px; color: rgba(255,255,255,.83); }
+    .stat-value { margin-top: 4px; font-size: 38px; line-height: 1; font-weight: 900; }
 
-    .stat svg {
-      width: 58px;
-      height: 58px;
-      color: var(--green);
-      stroke-width: 1.7;
-      flex: 0 0 auto;
-    }
+    .section { padding: 92px 0; border-top: 1px solid rgba(255,255,255,.08); }
 
-    .stat-label {
-      font-size: 20px;
-      color: rgba(255,255,255,.83);
-    }
-
-    .stat-value {
-      margin-top: 4px;
-      font-size: 38px;
-      line-height: 1;
-      font-weight: 900;
-    }
-
-    .section {
-      padding: 92px 0;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .kicker {
-      color: var(--green);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      font-size: 13px;
-    }
+    .section-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: start; }
+    .kicker { color: var(--green); font-weight: 900; text-transform: uppercase; letter-spacing: .06em; font-size: 13px; }
 
     .section h2 {
       margin-top: 16px;
@@ -563,30 +401,11 @@
       font-weight: 900;
     }
 
-    .section p {
-      color: rgba(255,255,255,.68);
-      font-size: 18px;
-      line-height: 1.8;
-    }
+    .section p { color: rgba(255,255,255,.68); font-size: 18px; line-height: 1.8; }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      min-height: 190px;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(255,255,255,.035);
-      padding: 28px;
-    }
-
-    .feature h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .feature { min-height: 190px; border-radius: 24px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.035); padding: 28px; }
+    .feature h3 { font-size: 22px; margin-bottom: 12px; }
 
     .contact-card {
       border-radius: 32px;
@@ -596,133 +415,41 @@
       text-align: center;
     }
 
-    .contact-card h2 {
-      margin-inline: auto;
-    }
+    .contact-card h2 { margin-inline: auto; }
+    .contact-card p { margin: 22px auto 0; max-width: 760px; }
 
-    .contact-card p {
-      margin: 22px auto 0;
-      max-width: 760px;
-    }
-
-    footer {
-      border-top: 1px solid rgba(255,255,255,.08);
-      padding: 34px 0;
-      color: rgba(255,255,255,.42);
-      text-align: center;
-      font-size: 14px;
-    }
+    footer { border-top: 1px solid rgba(255,255,255,.08); padding: 34px 0; color: rgba(255,255,255,.42); text-align: center; font-size: 14px; }
 
     @media (max-width: 1240px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 620px;
-      }
-
-      .hero-logo {
-        left: 50%;
-        top: 44%;
-        width: min(80vw, 430px);
-        transform: translate(-50%, -50%);
-      }
-
-      .dashboard {
-        display: none;
-      }
-
-      .phone {
-        display: none;
-      }
-
-      .stats-box {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stat:nth-child(2) {
-        border-right: 0;
-      }
-
-      .stat:nth-child(1),
-      .stat:nth-child(2) {
-        border-bottom: 1px solid rgba(255,255,255,.11);
-      }
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 620px; }
+      .hero-logo { left: 50%; top: 44%; width: min(80vw, 430px); transform: translate(-50%, -50%); }
+      .dashboard, .phone { display: none; }
+      .stats-box { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,.11); }
     }
 
     @media (max-width: 980px) {
-      .nav,
-      .platform-btn {
-        display: none;
-      }
-
-      .container {
-        width: min(100% - 36px, 1480px);
-      }
-
-      .header {
-        min-height: 96px;
-      }
-
-      .brand-logo {
-        width: 64px;
-        height: 64px;
-      }
-
-      .brand-name {
-        font-size: 28px;
-      }
-
-      .hero {
-        padding-top: 32px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .hero-visual {
-        min-height: 440px;
-      }
-
-      .stats-box {
-        grid-template-columns: 1fr;
-      }
-
-      .stat {
-        border-right: 0;
-        border-bottom: 1px solid rgba(255,255,255,.11);
-        padding: 28px;
-      }
-
-      .stat:last-child {
-        border-bottom: 0;
-      }
-
-      .section-grid,
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-card {
-        padding: 34px 22px;
-      }
+      .nav, .platform-btn { display: none; }
+      .container { width: min(100% - 36px, 1480px); }
+      .header { min-height: 96px; }
+      .brand-logo { width: 64px; height: 64px; }
+      .brand-name { font-size: 28px; }
+      .hero { padding-top: 32px; }
+      .hero p { font-size: 18px; }
+      .hero-visual { min-height: 440px; }
+      .stats-box { grid-template-columns: 1fr; }
+      .stat { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.11); padding: 28px; }
+      .stat:last-child { border-bottom: 0; }
+      .section-grid, .feature-grid { grid-template-columns: 1fr; }
+      .contact-card { padding: 34px 22px; }
     }
 
     @media (max-width: 560px) {
-      .hero h1 {
-        font-size: 48px;
-      }
-
-      .btn {
-        width: 100%;
-        min-width: 0;
-      }
-
-      .hero-actions {
-        gap: 14px;
-      }
+      .hero h1 { font-size: 48px; }
+      .btn { width: 100%; min-width: 0; }
+      .hero-actions { gap: 14px; }
     }
   </style>
 </head>
@@ -731,7 +458,7 @@
   <div class="page">
     <header class="container header">
       <a class="brand" href="#">
-        <img class="brand-logo" src="assets/logo.png" alt="KronoShift">
+        <img class="brand-logo ks-logo" src="./assets/logo.png" alt="KronoShift">
         <div class="brand-name">Krono<span>Shift</span></div>
       </a>
 
@@ -767,12 +494,12 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <img class="hero-logo" src="assets/logo.png" alt="">
+          <img class="hero-logo ks-logo" src="./assets/logo.png" alt="">
 
           <div class="dashboard">
             <div class="dashboard-head">
               <div class="mini-brand">
-                <img src="assets/logo.png" alt="">
+                <img class="ks-logo" src="./assets/logo.png" alt="">
                 Krono<span>Shift</span>
               </div>
               <span></span>
@@ -821,7 +548,14 @@
 
           <div class="phone">
             <div class="phone-inner">
-              <div class="phone-time">9:01</div>
+              <div class="phone-top">
+                <div class="phone-brand">
+                  <img class="ks-logo" src="./assets/logo.png" alt="">
+                  Krono<span>Shift</span>
+                </div>
+                <div class="phone-time">9:01</div>
+              </div>
+
               <h3>Missions</h3>
               <div class="tabs">
                 <span class="on">Proposées</span>
@@ -863,59 +597,37 @@
         <div class="stats-box">
           <div class="stat">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-5"/></svg>
-            <div>
-              <div class="stat-label">Chauffeurs vérifiés</div>
-              <div class="stat-value">100%</div>
-            </div>
+            <div><div class="stat-label">Chauffeurs vérifiés</div><div class="stat-value">100%</div></div>
           </div>
 
           <div class="stat">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg>
-            <div>
-              <div class="stat-label">Réponse moyenne</div>
-              <div class="stat-value">15 min</div>
-            </div>
+            <div><div class="stat-label">Réponse moyenne</div><div class="stat-value">15 min</div></div>
           </div>
 
           <div class="stat">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <div>
-              <div class="stat-label">Entreprises actives</div>
-              <div class="stat-value">250+</div>
-            </div>
+            <div><div class="stat-label">Entreprises actives</div><div class="stat-value">250+</div></div>
           </div>
 
           <div class="stat">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.88L18.18 21 12 17.77 5.82 21 7 14.15l-5-4.88 6.91-1.01L12 2Z"/></svg>
-            <div>
-              <div class="stat-label">Satisfaction</div>
-              <div class="stat-value">98%</div>
-            </div>
+            <div><div class="stat-label">Satisfaction</div><div class="stat-value">98%</div></div>
           </div>
         </div>
       </section>
 
       <section id="entreprises" class="section">
         <div class="container section-grid">
-          <div>
-            <div class="kicker">Entreprises</div>
-            <h2>Couvrez vos missions avec des chauffeurs qualifiés.</h2>
-          </div>
-          <p>
-            Publiez un besoin, indiquez le permis, la zone, la durée et recevez des profils compatibles. KronoShift vous aide à structurer vos remplacements sans multiplier les appels.
-          </p>
+          <div><div class="kicker">Entreprises</div><h2>Couvrez vos missions avec des chauffeurs qualifiés.</h2></div>
+          <p>Publiez un besoin, indiquez le permis, la zone, la durée et recevez des profils compatibles. KronoShift vous aide à structurer vos remplacements sans multiplier les appels.</p>
         </div>
       </section>
 
       <section id="chauffeurs" class="section">
         <div class="container section-grid">
-          <div>
-            <div class="kicker">Chauffeurs</div>
-            <h2>Créez votre profil vérifié.</h2>
-          </div>
-          <p>
-            Ajoutez votre photo, vos permis, vos documents et vos disponibilités pour recevoir des missions adaptées à votre profil et à votre zone.
-          </p>
+          <div><div class="kicker">Chauffeurs</div><h2>Créez votre profil vérifié.</h2></div>
+          <p>Ajoutez votre photo, vos permis, vos documents et vos disponibilités pour recevoir des missions adaptées à votre profil et à votre zone.</p>
         </div>
       </section>
 
@@ -923,35 +635,18 @@
         <div class="container">
           <div class="kicker">Comment ça marche</div>
           <h2>Une demande. Des profils. Une mission confirmée.</h2>
-
           <div class="feature-grid" style="margin-top: 42px;">
-            <div class="feature">
-              <h3>1. Demande</h3>
-              <p>L’entreprise précise son besoin : date, lieu, permis, durée et type de mission.</p>
-            </div>
-
-            <div class="feature">
-              <h3>2. Profils</h3>
-              <p>KronoShift propose des chauffeurs compatibles selon documents, zone et disponibilités.</p>
-            </div>
-
-            <div class="feature">
-              <h3>3. Mission</h3>
-              <p>La mission est validée, avec les informations nécessaires pour chaque partie.</p>
-            </div>
+            <div class="feature"><h3>1. Demande</h3><p>L’entreprise précise son besoin : date, lieu, permis, durée et type de mission.</p></div>
+            <div class="feature"><h3>2. Profils</h3><p>KronoShift propose des chauffeurs compatibles selon documents, zone et disponibilités.</p></div>
+            <div class="feature"><h3>3. Mission</h3><p>La mission est validée, avec les informations nécessaires pour chaque partie.</p></div>
           </div>
         </div>
       </section>
 
       <section id="tarifs" class="section">
         <div class="container section-grid">
-          <div>
-            <div class="kicker">Tarifs</div>
-            <h2>Accès pré-lancement sur demande.</h2>
-          </div>
-          <p>
-            KronoShift est en phase de pré-lancement. Les premières entreprises et les premiers chauffeurs peuvent rejoindre le réseau gratuitement pour tester le service.
-          </p>
+          <div><div class="kicker">Tarifs</div><h2>Accès pré-lancement sur demande.</h2></div>
+          <p>KronoShift est en phase de pré-lancement. Les premières entreprises et les premiers chauffeurs peuvent rejoindre le réseau gratuitement pour tester le service.</p>
         </div>
       </section>
 
@@ -960,10 +655,7 @@
           <div class="contact-card">
             <div class="kicker">Contact</div>
             <h2>Rejoindre KronoShift</h2>
-            <p>
-              Entreprise de transport ou chauffeur professionnel, laissez vos coordonnées pour rejoindre le pré-lancement.
-            </p>
-
+            <p>Entreprise de transport ou chauffeur professionnel, laissez vos coordonnées pour rejoindre le pré-lancement.</p>
             <div class="hero-actions" style="justify-content:center;">
               <a class="btn btn-primary" href="mailto:contact@kronoshift.fr?subject=Accès entreprise KronoShift">Je suis une entreprise</a>
               <a class="btn btn-secondary" href="mailto:contact@kronoshift.fr?subject=Profil chauffeur KronoShift">Je suis <strong>chauffeur</strong></a>
@@ -973,9 +665,7 @@
       </section>
     </main>
 
-    <footer>
-      © 2026 KronoShift — Le bon chauffeur. Au bon moment.
-    </footer>
+    <footer>© 2026 KronoShift — Le bon chauffeur. Au bon moment.</footer>
   </div>
 </body>
 </html>
